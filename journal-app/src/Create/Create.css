@@ -1,0 +1,62 @@
+.button {
+  color: #0b0a0c;
+  background-color: #f88379;
+  cursor: pointer;
+  margin: 0px 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: insert -2px -3px 10px 0px rgba(139, 139, 139, 0.3);
+}
+
+.text_background {
+  color: #0b0a0c;
+  background-color: #f88379;
+}
+
+.create {
+  height: max-content;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-areas: ". body .";
+  background-color: #4890a8;
+}
+@media screen and (max-width: 900px) {
+  .create {
+    grid-template-columns: 1fr;
+    grid-template-areas: "body";
+  }
+}
+.create_fields {
+  grid-area: body;
+  display: grid;
+  grid-template-rows: 0.05fr 0.05fr 0.05fr 0.95fr;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 800px) {
+  .create_fields {
+    margin: 10px 20px;
+  }
+}
+.create_fields .tags {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 10px 0 20px 0;
+}
+.create_fields .tags input {
+  height: 30px;
+}
+.create_fields label {
+  color: #5a2776;
+  font-size: 16px;
+  font-weight: bold;
+}
+.create_fields .journalEntry {
+  height: 600px;
+  font-size: 20px;
+  padding: 15px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+.create_fields .journalEntry_label {
+  margin-bottom: 20px;
+}

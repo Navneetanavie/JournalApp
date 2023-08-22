@@ -1,0 +1,38 @@
+a {
+  text-decoration: none;
+}
+
+.home {
+  height: max-content;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-areas: ". body .";
+  background-color: #4890a8;
+}
+@media screen and (max-width: 900px) {
+  .home {
+    grid-template-columns: 1fr;
+    grid-template-areas: "body";
+  }
+}
+.home_journal-container {
+  grid-area: body;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 50px;
+  min-height: 1000px;
+}
+.home_journal-list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 350px));
+  gap: 20px;
+}
+.home_header {
+  font-size: 36px;
+  color: #0b0a0c;
+  align-self: center;
+}
